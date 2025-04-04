@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Burger</title>
+</head>
+<body>
+    <div class="dark-bgc"></div>
+    <div class="flex flex top-line">
+    <div class="burger">
+        <span class="bord b1"></span>
+        <span class="bord b2"></span>
+        <span class="bord b3"></span>
+    </div>
+    <ul class="menu">
+        <li><a href="#">Lorem.</a></li>
+        <li><a href="#">Aspernatur!</a></li>
+        <li><a href="#">Temporibus.</a></li>
+        <li><a href="#">Temporibus.</a></li>
+        <li class="cancel">x</li>
+    </ul>
+    <ul class="flex">
+        <li><a href="#">@</a></li>
+        <li><a href="#">@</a></li>
+        <li><a href="#">@</a></li>
+    </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    const dark = document.querySelector(".dark-bgc"),
+      burger = document.querySelector(".burger"),
+      menu = document.querySelector(".menu"),
+      cancel = document.querySelector(".cancel")
+
+    burger.addEventListener("click", function() {
+    menu.style.left = "0";
+    dark.style.display = "block"
+    })
+    function cancelBurger() {
+    menu.style.left = "-100%";
+    dark.style.display = "none"
+    }
+    cancel.addEventListener("click", cancelBurger)
+    dark.addEventListener("click", cancelBurger)
+
+
+</script>
